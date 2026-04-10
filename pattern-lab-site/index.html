@@ -8,28 +8,37 @@
 </head>
 <body>
 
-  <header>
-    <h1>Лабораторная работа: Паттерны проектирования</h1>
-    <p>Agile + CI + Design Patterns Demo</p>
-  </header>
+<header>
+  <h1>Лабораторная работа: Паттерны проектирования</h1>
+  <p>Factory + Observer + Singleton + Strategy</p>
+</header>
 
-  <main>
-    <section class="card">
-      <h2>Creational Pattern: Factory</h2>
-      <button onclick="createUser()">Создать пользователя</button>
-      <p id="output"></p>
-    </section>
+<main>
 
-    <section class="card">
-      <h2>Project Info</h2>
-      <ul>
-        <li>Методология: Scrum</li>
-        <li>CI: GitHub Actions</li>
-        <li>Архитектура: Modular JS</li>
-      </ul>
-    </section>
-  </main>
+  <section class="card">
+    <h2>Factory Pattern</h2>
+    <button onclick="createUser()">Создать пользователя</button>
+    <p id="output"></p>
+  </section>
 
-  <script src="app.js"></script>
+  <section class="card">
+    <h2>Observer Pattern</h2>
+    <button onclick="updateState()">Trigger Observer</button>
+  </section>
+
+  <section class="card">
+    <h2>Singleton Pattern</h2>
+    <button onclick="testSingleton()">Test Singleton</button>
+  </section>
+
+</main>
+
+<!-- ПРАВИЛЬНЫЙ ПОРЯДОК -->
+<script src="js/factory.js"></script>
+<script src="js/observer.js"></script>
+<script src="js/singleton.js"></script>
+<script src="js/strategy.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>

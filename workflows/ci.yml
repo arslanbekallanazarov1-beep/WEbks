@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install || true
+      - name: Check JS syntax
+        run: node -c js/app.js
 
-      - name: Run basic check
-        run: echo "CI pipeline successful - no build errors"
+      - name: Finish
+        run: echo "CI OK"

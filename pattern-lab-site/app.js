@@ -1,20 +1,26 @@
-// Factory Pattern
-class User {
-  constructor(role) {
-    this.role = role;
-  }
-}
-
-class UserFactory {
-  static createUser(type) {
-    if (type === "admin") return new User("admin");
-    if (type === "guest") return new User("guest");
-    return new User("default");
-  }
-}
-
+// ===== FACTORY =====
 function createUser() {
-  const user = UserFactory.createUser("admin");
+  const user = UserFactory.create("admin");
+
   document.getElementById("output").innerText =
-    "Создан пользователь с ролью: " + user.role;
+    "Создан пользователь: " + user.role;
+}
+
+// ===== OBSERVER =====
+function updateState() {
+  state.notify("Observer: состояние обновлено!");
+}
+
+// ===== SINGLETON =====
+function testSingleton() {
+  const a = new AppConfig();
+  const b = new AppConfig();
+
+  console.log("Singleton check:", a === b); // true
+  alert("Singleton: " + (a === b));
+}
+
+// ===== STRATEGY (демо) =====
+function testStrategy() {
+  console.log(executePayment("card", 1000));
 }
